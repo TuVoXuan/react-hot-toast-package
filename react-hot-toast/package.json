@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "concurrently \"npx @tailwindcss/cli -i ./src/styles/input.css -o ./dist/styles/output.css --watch\" \"tsc --watch\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -20,11 +20,16 @@
   },
   "devDependencies": {
     "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "concurrently": "^9.2.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "lucide-react": "^0.544.0",
+    "tailwindcss": "^4.1.13",
     "uuid": "^13.0.0"
   }
 }

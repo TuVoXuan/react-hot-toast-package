@@ -1,3 +1,4 @@
+import Toast from "../components/toast";
 import { EnumToastType } from "../types/react-hot-toast.enum";
 import { IToast } from "../types/react-hot-toast.type";
 import { createContext, ReactNode, useContext, useState } from "react";
@@ -35,6 +36,9 @@ export const ReactHotToastProvider = ({
 
   return (
     <ReactHotToastContext.Provider value={{ toasts, addToast, dismissToast }}>
+      {toasts.map((toast) => (
+        <Toast key={toast.id} toast={toast} />
+      ))}
       {children}
     </ReactHotToastContext.Provider>
   );
