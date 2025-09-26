@@ -1,50 +1,22 @@
-import { useToast } from "react-hot-toast";
+// import { useToast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import "./App.css";
 
 function App() {
-  const { addToast } = useToast();
+  // const { addToast } = useToast();
 
   return (
     <>
-      <button
-        onClick={() =>
-          addToast({
-            context: `toast success`,
-            type: "success",
-            duration: 5000,
-          })
-        }
-      >
+      <button onClick={() => toast.success(`toast success`)}>
         add toast success
       </button>
-      <button
-        onClick={() =>
-          addToast({
-            context: `toast warning`,
-            type: "warning",
-          })
-        }
-      >
+      <button onClick={() => toast.success(`toast warning`)}>
         add toast warning
       </button>
-      <button
-        onClick={() =>
-          addToast({
-            context: `toast error`,
-            type: "error",
-          })
-        }
-      >
+      <button onClick={() => toast.success(`toast error`)}>
         add toast error
       </button>
-      <button
-        onClick={() =>
-          addToast({
-            context: `toast loading`,
-            type: "loading",
-          })
-        }
-      >
+      <button onClick={() => toast.success(`toast loading`)}>
         add toast loading
       </button>
     </>
