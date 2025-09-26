@@ -8,3 +8,18 @@ export interface IToast {
     duration?: number,
   }
 }
+
+type ToastConfig = {
+  duration?: number,
+  position?: `${EnumToastType}`,
+  id?: string,
+}
+
+export type ToastFn = {
+  (message: string, config?: ToastConfig): void;
+  success: (message: string, config?: ToastConfig) => void;
+  error: (message: string, config?: ToastConfig) => void;
+  loading: (message: string, config?: ToastConfig) => void;
+  warning: (message: string, config?: ToastConfig) => void;
+  dismiss: (toastId: string) => void;
+}
