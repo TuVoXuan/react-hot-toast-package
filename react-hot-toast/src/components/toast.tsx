@@ -1,3 +1,4 @@
+import { EnumToastType } from "../types/react-hot-toast.enum";
 import { IToast } from "../types/react-hot-toast.type";
 import { Check, TriangleAlert, X, LoaderCircle } from "lucide-react";
 
@@ -10,25 +11,25 @@ export default function Toast({ toast }: ToastProps) {
 
   const renderIcon = () => {
     switch (type) {
-      case "success":
+      case EnumToastType.SUCCESS:
         return (
           <div className="flex items-center justify-center h-5 w-5 rounded-full bg-green-500">
             <Check className="size-4 text-white" />
           </div>
         );
-      case "error":
+      case EnumToastType.ERROR:
         return (
           <div className="flex items-center justify-center h-5 w-5 rounded-full bg-red-400">
             <X className="size-4 text-white" />
           </div>
         );
-      case "warning":
+      case EnumToastType.WARNING:
         return (
           <div className="flex items-center justify-center h-5 w-5 rounded-full">
             <TriangleAlert className="size-4 text-yellow-500" />
           </div>
         );
-      case "loading":
+      case EnumToastType.LOADING:
         return (
           <div className="flex items-center justify-center h-5 w-5 rounded-full animate-spin">
             <LoaderCircle className="size-4 text-black" />

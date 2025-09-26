@@ -1,5 +1,4 @@
 import { useToast } from "react-hot-toast";
-import { EnumToastType } from "react-hot-toast/dist/types/react-hot-toast.enum";
 import "./App.css";
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
         onClick={() =>
           addToast({
             context: `toast success`,
-            type: EnumToastType.SUCCESS,
+            type: "success",
             duration: 5000,
           })
         }
@@ -22,7 +21,7 @@ function App() {
         onClick={() =>
           addToast({
             context: `toast warning`,
-            type: EnumToastType.WARNING,
+            type: "warning",
           })
         }
       >
@@ -32,7 +31,7 @@ function App() {
         onClick={() =>
           addToast({
             context: `toast error`,
-            type: EnumToastType.ERROR,
+            type: "error",
           })
         }
       >
@@ -42,7 +41,7 @@ function App() {
         onClick={() =>
           addToast({
             context: `toast loading`,
-            type: EnumToastType.LOADING,
+            type: "loading",
           })
         }
       >

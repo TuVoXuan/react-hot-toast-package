@@ -21,7 +21,7 @@ interface ReactHotToastContextType {
   addToast: (args: {
     id?: string;
     context: any;
-    type: EnumToastType;
+    type: `${EnumToastType}`;
     duration?: number;
   }) => void;
   dismissToast: (toastId: string) => void;
@@ -47,13 +47,13 @@ export const ReactHotToastProvider = ({
   function addToast(args: {
     id?: string;
     context: any;
-    type: EnumToastType;
+    type: `${EnumToastType}`;
     duration?: number;
   }) {
     const newToast: IToast = {
       id: args.id || uuidv4(),
       content: args.context,
-      type: args.type,
+      type: args.type as EnumToastType,
     };
 
     if (args.duration) {
