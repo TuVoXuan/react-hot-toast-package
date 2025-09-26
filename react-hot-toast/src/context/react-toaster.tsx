@@ -108,8 +108,8 @@ interface ToasterProps {
   position?: `${EnumToastPosition}`;
 }
 
-export function ToasterTest({
-  duration = 3000,
+export function Toaster({
+  duration = 2000,
   position = "top-right",
 }: ToasterProps) {
   const toastsState = useSyncExternalStore(subscribe, getToasts);
