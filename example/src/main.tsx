@@ -7,7 +7,7 @@ import Toaster from "react-hot-toast/dist/components/toaster";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ReactHotToastProvider>
+    <ReactHotToastProvider duration={3000} position="top-right">
       <App />
       <Toaster />
     </ReactHotToastProvider>

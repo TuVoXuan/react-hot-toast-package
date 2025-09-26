@@ -6,7 +6,6 @@ import viteLogo from "/vite.svg";
 
 function App() {
   const { toasts, addToast, dismissToast } = useToast();
-  console.log("toasts: ", toasts);
 
   return (
     <>
@@ -22,7 +21,11 @@ function App() {
       <div className="card">
         <button
           onClick={() =>
-            addToast({ context: "hello world", type: EnumToastType.SUCCESS })
+            addToast({
+              context: `hello world + ${Math.random() * 100}`,
+              type: EnumToastType.SUCCESS,
+              duration: 5000,
+            })
           }
         >
           addToast
