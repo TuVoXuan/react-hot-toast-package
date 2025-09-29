@@ -1,4 +1,4 @@
-import { toast } from "react-hot-toast";
+import { toast } from "react-hot-toast-vxt";
 import "./App.css";
 
 function App() {
