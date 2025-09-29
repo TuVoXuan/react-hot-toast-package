@@ -1,6 +1,6 @@
 {
   "name": "react-hot-toast-vxt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is project learn how to create package. React hot toast source package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -35,6 +35,13 @@
     "type": "git",
     "url": "git+https://github.com/TuVoXuan/react-hot-toast-package"
   },
-  "keywords": ["toast", "notification", "react", "reactJs", "react-toast", "react-notification" ],
+  "keywords": [
+    "toast",
+    "notification",
+    "react",
+    "reactJs",
+    "react-toast",
+    "react-notification"
+  ],
   "author": "Vo Xuan Tu"
 }
